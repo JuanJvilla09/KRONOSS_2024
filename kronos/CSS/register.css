@@ -1,0 +1,137 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --body-color: #282828;
+    --Titulos-color: #ffd700;
+    --Boton-color1: #daa621;
+    --Boton-color2: #a07e27;
+    --Border-color: #b7860f;
+    --Header-color: #2e2e2f;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: var(--body-color);
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 2px;
+    color: var(--Titulos-color);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--Titulos-color);
+
+}
+
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px (0, 0, 0, 0.2);
+    
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--Titulos-color);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative; /* Para posicionar el ícono */
+}
+
+label {
+    margin: bottom 10px;
+    font-weight: bold;
+    color: var(--Boton-color1);
+}
+
+input {
+    padding: 10px 1px 10px 40px; /* Espacio para el ícono */
+    border: 2px solid var(--Titulos-color);
+    border-radius: 15px;
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: var(--body-color);
+    color: var(--Titulos-color);
+    margin-bottom: 10px
+    
+}
+
+input:focus {
+    border-color: var(--Titulos-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--Titulos-color);
+}
+
+.register {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--Boton-color1); /* Color del botón por defecto */
+    color: black; /* Color del texto */
+    cursor: pointer; /* Muestra un puntero en hover */
+    transition: background-color 0.3s, transform 0.3s; /* Suaviza cambios de color y escalado */
+}
+
+.register:hover {
+    background-color: var(--Boton-color2); /* Color al pasar el cursor */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.social-button.google {
+    background-color: #db4437;
+}
+
+.social-button.facebook {
+    background-color: #4267b2;
+}
+
+.social-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Estilo para los íconos */
+label i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    color: var(--Titulos-color) /* Color del ícono */
+}
